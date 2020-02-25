@@ -1,0 +1,7 @@
+{
+ "listen_port":":1088",
+ "server_address":"127.0.0.1:443",
+ "client_perm":"client.pem",
+ "client_key":"client.key",
+ "ca_cert":"ca.crt"
+}

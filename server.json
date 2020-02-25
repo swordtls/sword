@@ -1,0 +1,7 @@
+{
+  "listen_port":":443",
+  "server_perm":"server.pem",
+  "server_key":"server.key",
+  "client_perm":"client.pem",
+  "ca_cert":"ca.crt"
+}
