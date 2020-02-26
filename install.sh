@@ -9,12 +9,12 @@ openssl req -newkey rsa:2048 -nodes -keyout client.key -x509 -days 1024 -out cli
 openssl pkcs12 -export -in client.pem -inkey client.key -out client.p12 -certfile ca.crt
 
 #get go binary file
-wget https://dl.google.com/go/go1.13.8.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz
 
-tar -C /tmp -zxf go1.13.8.linux-amd64.tar.gz
+tar -C /tmp -zxf go1.14.linux-amd64.tar.gz
 
 #build sword
 /tmp/go/bin/go build sword.go
 
 ./sword --mode=b
-./sword --mode=s --conf=server.json --daemon=true 2>&1 >> /tmp/sword.log&
+./sword --mode=s --conf=server.json --daemon=true >> /tmp/sword.log 2>&1 &
